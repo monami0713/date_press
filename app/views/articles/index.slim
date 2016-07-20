@@ -1,0 +1,8 @@
+h1 datepress - top
+
+-@articles.each do |article|
+  .article-card
+    =image_tag article.image.url(:thumb)
+    p = simple_format(article.comment)
+
+= paginate @articles

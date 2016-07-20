@@ -1,0 +1,3 @@
+.article-card
+  = image_tag @article.image.url(:original)
+  p = simple_format(@article.comment)

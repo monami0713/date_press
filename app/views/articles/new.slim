@@ -1,0 +1,14 @@
+h1 Make a Article
+
+= form_for(@article, multipart: true) do |f|
+  .field
+    f.label :image
+    =f.file_field :image
+  .field
+    f.label :comment
+    =f.text_area :comment
+  .field
+    f.label :category
+    =f.select :category, [['シーン', 'scene'],['サプライズ', 'surprise']]
+  .actions
+    =f.submit 'Make a Article'
