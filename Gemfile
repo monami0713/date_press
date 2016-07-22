@@ -7,6 +7,7 @@ gem 'rails', '4.2.6'
 gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'font-awesome-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -17,6 +18,7 @@ gem 'aws-sdk', '~> 2'
 gem 'paperclip'
 gem 'slim'
 gem 'kaminari'
+gem 'acts_as_votable'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -35,6 +37,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

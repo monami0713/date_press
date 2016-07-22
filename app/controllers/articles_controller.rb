@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :set_user, only: [:index, :show]
   def index
     @articles = Article.order(:created_at).page(params[:page] || 1).per(10)
   end
@@ -17,9 +18,19 @@ class ArticlesController < ApplicationController
     render action: 'new'
   end
 
+  def like
+    @article = Article.find(params[:article_id])
+    @article.liked_by current_user
+    render :json => @article
+  end
+
   private
 
   def article_params
     params.require(:article).permit(:comment, :category, :deleted, :image);
+  end
+
+  def set_user
+    @user = current_user if user_signed_in?
   end
 end
