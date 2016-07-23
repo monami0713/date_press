@@ -1,0 +1,44 @@
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: $color-pink;
+  padding: 10px;
+  span {
+    margin-left: 10px;
+    font-size: xx-large;
+    color: #fff
+  }
+  .header-right {
+    float: right;
+    position: relative;
+    .content-wrapper {
+      display: table;
+      box-sizing: border-box;
+      .right-left {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 10px;
+
+        .profile-image{
+          width: 40px;
+          border-radius: 50px;
+        }
+      }
+      .right-right {
+        display: table-cell;
+        vertical-align: middle;
+        a {
+          display: inline-block;
+          background-color: $color-pink-dark;
+          color: #fff;
+          border-radius: 2px;
+          padding: 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

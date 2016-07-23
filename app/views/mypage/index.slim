@@ -1,0 +1,8 @@
+h1 mypage
+
+- @likes.each do |article|
+  article.card
+    =image_tag article.image.url(:thumb)
+    = icon(set_icon(article), class: 'like')
+    - if article.category == 'scene'
+      = icon('envelope', class: 'share-icon')

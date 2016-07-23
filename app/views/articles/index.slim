@@ -3,14 +3,17 @@ h1 datepress - top
   = @user
 
 -@articles.each do |article|
-  .article-card id="#{article.id}"
+  article.card
     =image_tag article.image.url(:thumb)
     - if user_signed_in?
       - if @user.voted_up_on?(article)
-        = icon('diamond')
+        = icon(set_icon(article), class: 'like')
       - else
         = link_to article_like_path(article), :remote => true, :method => :put, class: "clicklike" do
-          = icon('heart-o', class: 'likable')
+          = icon(set_icon(article), class: 'likable')
+    - else
+      = icon(set_icon(article), class: 'likable')
+
     p = simple_format(article.comment)
 
 = paginate @articles
