@@ -21,6 +21,7 @@ gem 'paperclip'
 gem 'slim'
 gem 'kaminari'
 gem 'acts_as_votable'
+gem 'seed_dump'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
