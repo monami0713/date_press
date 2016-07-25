@@ -1,3 +1,6 @@
-.article-card
-  = image_tag @article.image.url(:original)
-  p = simple_format(@article.comment)
+section.articles
+  ul
+    li
+      article.card
+        = image_tag @article.image.url(:original)
+        p = simple_format(@article.comment)

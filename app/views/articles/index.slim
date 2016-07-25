@@ -22,7 +22,7 @@ section.articles
                   div class="icon-circle likable #{article.category}"
                     = icon(set_icon(article))
             - else
-              div class="icon-circle like #{article.category}"
+              div class="icon-circle likable #{article.category}"
                 = icon(set_icon(article))
           .comment
             p = simple_format(article.comment)
