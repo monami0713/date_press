@@ -12,7 +12,13 @@
  *
  *= require_self
  */
+@charset "utf-8";
+@import "compass";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "global_vars";
+@import "swiper.min";
+@import "remodal";
+@import "remodal-default-theme";
+@import "bourbon";
 @import "common";

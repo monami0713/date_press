@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_user, only: [:index, :show]
   def index
-    @articles = Article.order(:created_at).page(params[:page] || 1).per(10)
+    @articles = Article.order(:created_at).page(params[:page] || 1).per(9)
   end
 
   def show

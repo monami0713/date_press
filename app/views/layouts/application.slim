@@ -4,6 +4,11 @@ html
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
+
+    - if controller.controller_name == 'articles'
+      = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js'
+      = javascript_include_tag 'articles'
+ 
   body
     == render 'header'
     == yield
