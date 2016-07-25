@@ -31,6 +31,6 @@ section.articles
 
 javascript:
   $('.clicklike').bind('ajax:success', function() {
-    $(this).children('i').addClass('liked');
+    $(this).children('div.icon-circle').addClass('like').removeClass('likable');
   });
 
