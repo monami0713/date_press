@@ -4,9 +4,11 @@ ActsAsVotable::Vote.create!([
   {votable_id: 4, votable_type: "Article", voter_id: 1, voter_type: "User", vote_flag: true, vote_scope: nil, vote_weight: 1},
   {votable_id: 5, votable_type: "Article", voter_id: 1, voter_type: "User", vote_flag: true, vote_scope: nil, vote_weight: 1}
 ])
+=begin
 User.create!([
   {email: "sayasaya1216@gmail.com", encrypted_password: "$2a$11$RBXcPXkSzJzLkol9ScSFPe1I0PT.EVZdcxMPek6u.BRGsPDXJOKvO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2016-07-25 03:09:19", last_sign_in_at: "2016-07-24 20:24:10", current_sign_in_ip: "::1", last_sign_in_ip: "::1", uid: nil, provider: nil}
 ])
+=end
 Article.create!([
   {comment: "映画でわかる、彼の素顔。はじめての映画はラブストーリーに決まり！", category: 0, deleted: false, image_file_name: "250345433.jpg", image_content_type: "image/jpeg", image_file_size: 100415, image_updated_at: "2016-07-20 03:49:41"},
   {comment: "遊園地ではお揃いコーデで\r\nさりげなく距離を縮める", category: 0, deleted: false, image_file_name: "78978266.jpg", image_content_type: "image/jpeg", image_file_size: 171508, image_updated_at: "2016-07-20 05:01:01"},
