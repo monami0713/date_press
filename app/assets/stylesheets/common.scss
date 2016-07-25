@@ -1,0 +1,192 @@
+@import "global_vars";
+@import "compass/css3/flexbox";
+
+body {
+  margin: 0;
+  color: $color-grey-dark;
+  p {
+    margin: 0;
+  }
+}
+
+header {
+  background-color: $color-pink;
+  padding: 10px;
+  span {
+    margin-left: 10px;
+    font-size: xx-large;
+    color: #fff
+  }
+  .header-right {
+    float: right;
+    position: relative;
+    .content-wrapper {
+      display: table;
+      box-sizing: border-box;
+      .right-left {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 10px;
+        a {
+          display: inline-block;
+          background-color: $color-pink-dark;
+          color: #fff;
+          border-radius: 4px;
+          padding: 10px;
+          text-decoration: none;
+        }
+
+        .profile-image{
+          width: 40px;
+          border-radius: 50px;
+        }
+      }
+      .right-right {
+        display: table-cell;
+        vertical-align: middle;
+        a {
+          display: inline-block;
+          background-color: $color-pink-dark;
+          color: #fff;
+          border-radius: 4px;
+          padding: 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#first {
+  background-image: image-url('sample.jpg');
+}
+#second {
+  background-image: image-url('sample2.jpg');
+}
+#third {
+  background-image: image-url('sample3.jpg');
+}
+
+.articles {
+  ul {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    width: 1100px;
+    margin: 0 auto;
+
+    li {
+      list-style: none;
+      width: 350px;
+
+      .card {
+        border: solid 1px #fff;
+        margin: 10px;
+        padding: 15px;
+        width: 305px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px #ccc;
+        img {
+          width: 300px;
+          height: 300px;
+        }
+        .icon-circle {
+          float: right;
+          position: relative;
+          padding: 7px;
+          border-radius: 50px;
+          margin-top: 5px;
+        }
+        i {
+          font-size: x-large;
+        }
+        a {
+          text-decoration: none;
+          .likable {
+            background-color: #ccc;
+            i {
+              color: #fff;
+            }
+          }
+        }
+        .like.scene {
+          background-color: $color-pink-dark;
+          i {
+            color: #fff;
+          }
+        }
+        .like.surprise {
+          background-color: $color-like-surprise;
+          i {
+            color: #fff;
+          }
+        }
+        .share {
+          background-color: $color-share;
+          color: #fff;
+          margin-left: 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .comment {
+          width: 300px;
+          margin-top: 25px;
+          min-height: 48px;
+        }
+      }
+    }
+  }
+}
+.pagination {
+  text-align: center;
+  .page {
+    display: inline-block;
+    border: solid 2px $color-pink;
+    padding: 0px 5px;
+    margin-right: 8px;
+    a {
+      text-decoration: none;
+      color: $color-pink;
+    }
+  }
+  .current {
+    background-color: $color-pink;
+    color: #fff;
+  }
+  .next, .last, .first, .prev {
+    a {
+      text-decoration: none;
+      color: $color-pink;
+    }
+  }
+}
+.fb-share {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #315096;
+  width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+}
+.tw-share {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #55acee;
+  width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+}
+.line-share {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #00c300;
+  width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+}

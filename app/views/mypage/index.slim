@@ -1,0 +1,22 @@
+section.articles
+  ul
+    - @likes.each do |article|
+      li
+        article.card
+          =image_tag article.image.url(:thumb)
+          br
+          - if article.category == 'scene'
+            .icon-circle.share
+              =icon('envelope')
+          div class="icon-circle like #{article.category}"
+            = icon(set_icon(article), class: 'like')
+          br
+          .comment
+            p = simple_format(article.comment)
+
+
+div class="remodal" data-remodal-id="sns-share" data-remodal-options="hashTracking:false"
+  section.sns
+    = link_to 'facebook', '#', class: 'fb-share'
+    = link_to 'twitter', '#', class: 'tw-share'
+    = link_to 'LINE', 'line://msg/', class: 'line-share'

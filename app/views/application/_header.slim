@@ -1,0 +1,14 @@
+header
+  span datepress 
+  .header-right
+    .content-wrapper
+      - if user_signed_in?
+        .right-left
+          = image_tag 'users/profile', alt: 'userimage', class: 'profile-image thumb'
+        .right-right
+          = link_to 'MyPage', mypage_index_path
+      - else
+        .right-left
+          = link_to '新規登録', new_user_session_path 
+        .right-right
+          = link_to 'login', new_user_session_path
