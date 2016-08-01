@@ -45,9 +45,9 @@ Rails.application.configure do
     storage: :s3,
     s3_credentials: {
       bucket: 'datepress',
-      access_key_id: 'AKIAJSTFBRIRPEVPI7BA',
-      secret_access_key: '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',
-      s3_region: 'ap-northeast-1'
+      access_key_id: 'access_key_id',
+      secret_access_key: 'secret_access_key',
+      s3_region: 's3_region'
     }
   }
 end
